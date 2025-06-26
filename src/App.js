@@ -1,13 +1,4 @@
-import logo from './assets/logo.png';
-import menuhamburguer from './assets/menuhamburguer.png';
-import whatsapp from './assets/whatsapp.png'
-import alvenaria_icon from './assets/alvenaria_icon.png'
-import eletricidade_icon from './assets/eletricidade_icon.png'
-import encanamento_icon from './assets/encanamento_icon.png'
-import drywall_icon from './assets/drywall_icon.png'
-import ar_icon from './assets/ar_icon.png'
-import facebook from './assets/facebook.png'
-import { useState } from 'react';
+import images from './images';
 import {Container, Header, Main, Paragrafo, Footer} from './styles';
 import './global';
 
@@ -31,7 +22,7 @@ function App() {
         bottom: "20px",
         right: "20px",
         padding: "10px 15px",
-        backgroundColor: "#407c54",
+        backgroundColor: "#00008b",
         color: "white",
         border: 'none',
         borderRadius: "5px",
@@ -41,7 +32,7 @@ function App() {
       ↑ Início
     </button>
         <Header>
-          <img src={logo} className="Rs-logo" alt="logo" style={{//Logo da RS
+          <img src={images.logo} className="Rs-logo" alt="logo" style={{//Logo da RS
             margin: '0 0 0 30px',
             width: '10%',
             height: '100%',
@@ -60,39 +51,49 @@ function App() {
           </div>
            
             <a href="https://wa.me/5547999746021?text=Olá" target="_blank" rel="noopener noreferrer">
-                <img src={menuhamburguer} className='menuhamburguer' alt='menu' style={{
+                <img src={images.menuhamburguer} className='menuhamburguer' alt='menu' style={{
               width:'100%',
               height: '40%',
               objectFit: 'cover'
             }}/>
               </a>
         </Header>
-        <h1 style={{fontSize:'28px',margin:'15px'}}>Alguns dos trabalhos que fazemos:</h1>
-        <div style={{width:'70%',height: '30vh',display:'flex', justifyContent: 'space-evenly',alignItems: 'center',backgroundColor:'#407c54',color:'#f6f6f6',borderRadius:'15px'}}>  
+        <h1 style={{fontSize:'28px',margin:'15px'}}>Trabalhamos com:</h1>
+        <div //icon
+         style={{width:'80%',height: '30vh',display:'flex', justifyContent: 'space-evenly',alignItems: 'center',backgroundColor:'#00008b',color:'#f6f6f6',borderRadius:'15px'}}>  
 
             <a href='#alvenaria' style={icon}>
-              <img src={alvenaria_icon} />Alvenaria</a>
+              <img src={images.alvenaria_icon} />Alvenaria</a>
             
             <a href='#eletrica' style={icon}>
-              <img src={eletricidade_icon} />Elétrica
+              <img src={images.eletricidade_icon} />Elétrica
             </a>
 
             <a href='#encanamento' style={icon}>
-              <img src={encanamento_icon} />Encanamento
+              <img src={images.encanamento_icon} />Encanamento
             </a>
 
             <a href='#drywall' style={icon}>
-              <img src={drywall_icon} />Drywall
+              <img src={images.drywall_icon} />Drywall
             </a>
 
             <a href='#ar-condicionado' style={icon}>
-              <img src={ar_icon} />Ar-Condicionado
+              <img src={images.ar_icon} />Ar-Condicionado
+            </a>
+
+            <a href='#reparos' style={icon}>
+              <img src={images.reparos_icon} />Reparos em geral
             </a>
         </div>
+        <div style={{margin:'70px 0 0 0',display:'flex',alignItems:'center',flexDirection:'column'}}>
+          <h1 style={{fontSize:'38px'}}>Precisando de ajuda com a reforma de sua residência?</h1>
+        <h1 style={{fontSize:'38px', color:'#00008b'}}>Chama que eu resolvo</h1>
+        </div>
         <a href="https://wa.me/5547999746021?text=Estou interessado na Alvenaria" target="_blank" rel="noopener noreferrer"
-            style={{margin:'40px',width:'400px',height:'50px' , fontSize:'34px', backgroundColor:'#407c54', color:'#f6f6f6', borderRadius:'5px',boxShadow:'inset 0 0 0 2px #1c4c32', display:'flex',alignItems:'center',justifyContent:'center'}}>
+            style={{margin:'40px',width:'400px',height:'50px' , fontSize:'34px', backgroundColor:'#ffd426', color:'#00008b', borderRadius:'5px',boxShadow:'inset 0 0 0 2px #1c4c32', display:'flex',alignItems:'center',justifyContent:'center'}}>
             Entrar em contato
-            </a>
+        </a>
+        
         <div style={{padding:'50px'}}>
         <h style={{fontSize:'35px'}}>RS Manuntenção e Reformas</h>
 
@@ -118,13 +119,47 @@ function App() {
         &nbsp;Nossa empresa se dedica a entregar um serviço de qualidade, com atenção ao detalhe e sempre dentro do que foi combinado. Estamos prontos para ajudar em qualquer tipo de obra, seja em casa, em prédios ou no comércio.
         </Paragrafo>
         </div>
-
+      
         <section id="alvenaria" className="relative h-64 bg-gray-100" style={{margin:'50px',display:'flex', flexDirection:'column', alignItems:'center'}}>
           <h style={{ margin:'30px', fontSize:'50px' }}>Alvenaria</h>
           <Main>
-            <a href="https://wa.me/5547999746021?text=Estou interessado na Alvenaria" target="_blank" rel="noopener noreferrer"
-            style={{width:'35%',height:'8%' , fontSize:'34px', backgroundColor:'#f6f6f6', color:'#1c4c32', borderRadius:'5px',boxShadow:'inset 0 0 0 2px #1c4c32', display:'flex',alignItems:'center',justifyContent:'center'}}>
-            Estou interessado
+            <h style={{fontSize:'34px',margin:'20px'}}>Trabalhamos com:
+            </h>
+            <h1>Construção de Paredes</h1>
+            <ul>
+              <li>Levantamento de paredes internas e externas</li>
+              <li>Divisórias em tijolos cerâmicos ou blocos de concreto</li>
+              <li>Impermeabilização de paredes</li>
+            </ul>
+
+            <h1>Reboco e Chapisco</h1>
+            <ul>
+              <li>Chapisco: aplicação de camada áspera para aderência</li>
+              <li>Emboço: camada intermediária de regularização </li>
+              <li>Reboco: acabamento final antes da pintura</li>
+            </ul>
+
+            <h1>Assentamento de Pisos e Revestimentos</h1>
+            <ul>
+              <li>Instalação de pisos cerâmicos, porcelanatos, lajotas etc.</li>
+              <li>Impermeabilização de pisos, paredes e lajes</li>
+            </ul>
+
+            <h1>Aberturas e Fechamentos</h1>
+            <ul>
+              <li>Abertura de vãos para portas e janelas</li>
+              <li>Fechamento de ambientes ou salas</li>
+            </ul>
+
+            <h1>Reformas e Manutenções</h1>
+            <ul>
+              <li>Reparo em paredes com trincas ou infiltrações</li>
+              <li>impermibilizaçãode pisos paredes e lajes</li>
+            </ul>
+            
+            <a href="https://wa.me/5547999746021?text=Olá, estou interessado em fazer um orçamento sobre Alvenaria" target="_blank" rel="noopener noreferrer"
+            style={{margin:'50px 0 0 0' ,width:'35%',height:'8%' , fontSize:'34px', backgroundColor:'#f6f6f6', color:'#000000', borderRadius:'5px',boxShadow:'inset 0 0 0 2px #000000', display:'flex',alignItems:'center',justifyContent:'center'}}>
+             Solicitar orçamento
             </a>
 
 
@@ -134,7 +169,10 @@ function App() {
         <section id="eletrica" style={{margin:'50px',display:'flex', flexDirection:'column', alignItems:'center'}}>
           <h style={{ margin:'30px', fontSize:'50px' }}>Elétrica</h>
           <Main>
-
+            <a href="https://wa.me/5547999746021?text=Olá, estou interessado em fazer um orçamento sobre Elétrica" target="_blank" rel="noopener noreferrer"
+            style={{margin:'50px 0 0 0' ,width:'35%',height:'8%' , fontSize:'34px', backgroundColor:'#f6f6f6', color:'#000000', borderRadius:'5px',boxShadow:'inset 0 0 0 2px #000000', display:'flex',alignItems:'center',justifyContent:'center'}}>
+             Solicitar orçamento
+            </a>
 
 
           </Main>
@@ -143,7 +181,10 @@ function App() {
         <section id="encanamento" style={{margin:'50px',display:'flex', flexDirection:'column', alignItems:'center'}}>
           <h style={{ margin:'30px', fontSize:'50px' }}>Encanamento</h>
           <Main>
-
+            <a href="https://wa.me/5547999746021?text=Olá, estou interessado em fazer um orçamento sobre Encanamento" target="_blank" rel="noopener noreferrer"
+            style={{margin:'50px 0 0 0' ,width:'35%',height:'8%' , fontSize:'34px', backgroundColor:'#f6f6f6', color:'#000000', borderRadius:'5px',boxShadow:'inset 0 0 0 2px #000000', display:'flex',alignItems:'center',justifyContent:'center'}}>
+             Solicitar orçamento
+            </a>
 
 
           </Main>
@@ -152,7 +193,10 @@ function App() {
         <section id="drywall" style={{margin:'50px',display:'flex', flexDirection:'column', alignItems:'center'}}>
           <h style={{ margin:'30px', fontSize:'50px' }}>Drywall</h>
           <Main>
-
+            <a href="https://wa.me/5547999746021?text=Olá, estou interessado em fazer um orçamento sobre Drywall" target="_blank" rel="noopener noreferrer"
+            style={{margin:'50px 0 0 0' ,width:'35%',height:'8%' , fontSize:'34px', backgroundColor:'#f6f6f6', color:'#000000', borderRadius:'5px',boxShadow:'inset 0 0 0 2px #000000', display:'flex',alignItems:'center',justifyContent:'center'}}>
+             Solicitar orçamento
+            </a>
 
 
           </Main>
@@ -161,13 +205,28 @@ function App() {
         <section id="ar-condicionado" style={{margin:'50px',display:'flex', flexDirection:'column', alignItems:'center'}}>
           <h style={{ margin:'30px', fontSize:'50px' }}>Ar-Condicionado</h>
           <Main>
+            <a href="https://wa.me/5547999746021?text=Olá, estou interessado em fazer um orçamento sobre Ar-Condicionado" target="_blank" rel="noopener noreferrer"
+            style={{margin:'50px 0 0 0' ,width:'35%',height:'8%' , fontSize:'34px', backgroundColor:'#f6f6f6', color:'#000000', borderRadius:'5px',boxShadow:'inset 0 0 0 2px #000000', display:'flex',alignItems:'center',justifyContent:'center'}}>
+             Solicitar orçamento
+            </a>
 
+
+          </Main>
+        </section>
+
+        <section id="reparos" style={{margin:'50px',display:'flex', flexDirection:'column', alignItems:'center'}}>
+          <h style={{ margin:'30px', fontSize:'50px' }}>Reparos em Geral</h>
+          <Main>
+            <a href="https://wa.me/5547999746021?text=Olá, estou interessado em fazer um orçamento sobre reparos em geral" target="_blank" rel="noopener noreferrer"
+            style={{margin:'50px 0 0 0' ,width:'35%',height:'8%' , fontSize:'34px', backgroundColor:'#f6f6f6', color:'#000000', borderRadius:'5px',boxShadow:'inset 0 0 0 2px #000000', display:'flex',alignItems:'center',justifyContent:'center'}}>
+             Solicitar orçamento
+            </a>
 
 
           </Main>
         </section>
         <Footer>
-          <img src={logo} className="Rs-logo" alt="logo" style={{//Logo da RS
+          <img src={images.logo} className="Rs-logo" alt="logo" style={{//Logo da RS
             margin: '0 0 0 30px',
             width: '80px',
             height: '80px',
@@ -179,10 +238,10 @@ function App() {
                 Contatos:
               </h1>
               <a href="https://wa.me/5547999746021?text=Olá" target="_blank" rel="noopener noreferrer">
-                <img src={whatsapp}/>
+                <img src={images.whatsapp}/>
               </a>
               <a href='https://www.facebook.com/cleciorenators?locale=pt_BR' target='_blank' rel="noopener noreferrer">
-                <img src={facebook}/>
+                <img src={images.facebook}/>
               </a>
             </div>
             <div style={{display:'flex',flexDirection:'row'}}>
